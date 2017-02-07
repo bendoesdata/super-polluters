@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducing: The Super Polluters</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Load Google Charts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- Load jQuery and uiKit -->
+        <script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+
+        <!-- Load CSS -->
+        <link rel="stylesheet" href="js/uikit.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+
+
+        <!-- Load chart files -->
+        <script src="js/table.js"></script>
+        <script src="js/treemap.js"></script>
+        <script src="js/pie-charts.js"></script>
+        <script src="js/google-maps.js"></script>
+        <script src="js/column.js"></script>
+
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart','treemap','table', 'map', 'bar']});
+
+        google.charts.setOnLoadCallback(drawSarahChart);
+        google.charts.setOnLoadCallback(drawAnthonyChart);
+        google.charts.setOnLoadCallback(drawTreemap);
+        google.charts.setOnLoadCallback(drawGhgTable);
+        google.charts.setOnLoadCallback(drawMap);
+        google.charts.setOnLoadCallback(drawColumnChart);
+        </script>
+
+
+
+    <style>
+    #tm-hero {
+      background-image: url('images/sunset-smoke.jpg');
+    }
+
+    </style>
+    </head>
+<body>
+
+<!-- Jumbotron Header -->
+<div id="tm-hero" class="tm-hero uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast">
+  <div class="uk-container uk-container-center">
+    <div class="uk-width-medium-1-1">
+      <div class="uk-text-center ">
+        <br />
+        <br />
+        <h1 style="font-size: 3.8em; margin-top: 20px" class="uk-heading-large uk-margin-large-bottom">Introducing: The Super Polluters</h1><br class="uk-hidden-small"><h2 style="font-size: 1.6em; max-width: 700px">Every year, over 16,000 facilities in the US emit toxic air and greenhouse gases into the atmosphere. But a small group — less than 10 parent companies — are responsible for most of it.</h2>
+        <a class="uk-button uk-button-large" id="scroll" style="margin-top: 20px">Learn more</a>
+        <p style="color: white; margin-top: 30px; font-style: italic">
+          by Benjamin Cooley
+        </p>
+
+        <!-- Header Social Media buttons - B & W -->
+        <ul class="share-buttons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&t=Introducing%3A%20The%20Super%20Polluters" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="images/flat_web_icon_set-bw/black/Facebook.png"></a></li>
+          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&text=Introducing%3A%20The%20Super%20Polluters:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&via=bnj_cooley" target="_blank" title="Tweet"><img alt="Tweet" src="images/flat_web_icon_set-bw/black/Twitter.png"></a></li>
+          <li><a href="https://plus.google.com/share?url=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="images/flat_web_icon_set-bw/black/Google+.png"></a></li>
+          <li><a href="mailto:?subject=Introducing%3A%20The%20Super%20Polluters&body=Every%20year%2C%20over%2016%2C000%20facilities%20in%20the%20US%20emit%20toxic%20air%20and%20greenhouse%20gases%20into%20the%20atmosphere.%20But%20a%20small%20group%20%E2%80%94%20less%20than%2010%20parent%20companies%20%E2%80%94%20are%20responsible%20for%20most%20of%20it.:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html" target="_blank" title="Send email"><img alt="Send email" src="images/flat_web_icon_set-bw/black/Email.png"></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+<p class="caption" style="text-align: center">
+  Image: Ozzy Delaney, Flickr - <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons 2.0</a>
+</p>
+
+<!-- Beginning of article body container -->
+<div class="uk-container uk-container-center uk-margin-top">
+
+    <article class="article-container" id="start-article">
+<br />
+      <!-- Maybe add this if I have time: <h1 class="uk-article-title">There exists a class of polluters...</h1> -->
+
+      <p>If a couple of friends are splitting a pizza, and one person takes a third of the whole while the other six are left to split the rest, we call it unfair. Some might even call the first friend greedy. But when a tiny amount of factories are responsible for a third of all emissions in the United States, we call them something different: super polluters.
+        <br />
+        <br />
+        In January of 2016, academics from State University of New York released a study analysing the pollution emissions of all facilities reporting to the Environmental Protection Agency’s Toxic Release Inventory (TRI) program. 
+        <br />
+        <br />
+        They wanted to test the concept of environmental disproportionality, a term coined by environmental sociologist William Freudenburg which <a href="https://en.wikipedia.org/wiki/Double_diversion#Disproportionality_and_distraction">describes</a> when “a small fraction of the population consumes many more resources or produces much more pollution than other members”. 
+        <br />
+        <br />
+        In other words, they wanted to know who has been taking more than their fair share of the pollution pie. 
+        <br />
+        <br />
+        After studying the reports of toxic air emissions, the <a href="http://iopscience.iop.org/article/10.1088/1748-9326/11/1/015004">researchers found</a> what they were looking for: a “small group of disproportionate generators” that represented “toxic outliers” in the dataset. They found that of the nearly 16,000 facilities reporting in 2014, less than 1,500 (or about 10%) were responsible for over 90% of toxic air emissions. They also found a significant correlation that shows these toxic outliers may be affecting minority populations in rural areas more so than white, urban populations.
+        <br />
+        <br />
+</p>
+</article>
+<div class="img-container">
+  <img style="width:100%" src="images/gibson-power-station.jpg" />
+  <p class="caption">
+    The Gibson Power Station is located in Southwest Indiana, a rural hub for coal power plants. It's owned by Duke Energy, one of the biggest energy conglomerates in the US. (Photo by Duke Energy, <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons</a>)
+  </p>
+</div>
+<article class="article-container">
+<p>
+<br />
+The TRI database, which currently shows data from 2010 to 2014, tracks all output of toxic chemicals that may be a threat to human health. But toxic air emissions aren’t the only dirty thing being released by these factories. Many of them, especially the power plants, release huge amounts of greenhouse gases — a <a href="http://climate.nasa.gov/causes/">well-documented contributor</a> to global warming and climate change.
+<br />
+<br />
+Toxic air and greenhouse gases share the quality of being harmful, but they cause different problems. One dirties the air people breathe with particulate matter and chemicals, bringing risks of lung cancer, asthma and cardiovascular disease; the other changes our atmosphere, melting glaciers and raising sea levels as the average global temperature increases.
+<br />
+<br />
+Perhaps the most important shared quality, however, is that someone is responsible for them. That’s why in September of 2016, the Center for Public Integrity published an investigation showing an “unprecedented picture of air emissions” in the US. After merging two federal datasets of toxic air and greenhouse gases, the Center found that the same disproportionality that exists in toxic air polluters is also present among the highest emitters of greenhouse gases. 
+<br />
+<br />
+In fact, in both datasets the top 100 worst companies were responsible for emitting more than their fair share of toxic air and greenhouse gases. Data from the TRI report shows that the top 100 worst plants are responsible for over one-third of toxic air emissions. The top 100 worst companies from the other dataset take up one-fourth of all greenhouse emissions.
+<br />
+      </p>
+    </article>
+
+<!-- Insert pie chart -->
+          <div class="uk-panel uk-panel-box" style="max-width: 800px; text-align: center; margin: auto;" >
+                    <h2>Top 100 worst companies for toxic air and greenhouse gas emissions</h2>
+                    <!--Table and divs that hold the pie charts-->
+                    <div style=" " id="pie-chart">
+
+
+                     <div id="TRI_chart" style="border: 1px solid #ccc; max-width: 100%; display: block;"></div></td>
+                     <div id="GHG_chart" style="border: 1px solid #ccc; max-width: 100%; display: block;"></div></td>
+
+                     <h5 class="source-credit">Source: EPA, Center for Public Integrity. <a href='https://docs.google.com/spreadsheets/d/1UXE-z0nNaP8IHhCJmyZyuxDMt5R6a7BgOKLlITKx-Mc/edit#gid=20502916'>Download data.</a></h5>
+
+                    </div>
+          </div>
+
+
+
+        <article class="article-container">
+          <p>
+            <br />
+            <br />
+            From the combined dataset, the Center has highlighted a new ranking system, a sort of worst-of-the-worst list of facilities made up of 22 facilities on the top 100 for both toxic air and greenhouse gases.  Though these dual-super polluters don’t have a dedicated name yet, they represent some of the worst facilities in the country for combined environmental risk. And despite being spread across Midwestern America, the responsibility for most of these facilities ultimately stops with just a few parent companies, the ultimate owner of each facility.
+            <br />
+            <br />
+          </p>
+            <h2><em>In the heart of coal country</em></h2>
+          <p>
+            <br />
+            Unsurprisingly, many facilities deemed super polluters by environmental academics can be found spanning the length of US "coal country." This region, stretching from northern Pennsylvania across the Midwest and down to Texas, has long been home to coal mines and power plants. 
+            <br />
+            <br />
+            Though the types of facilities reporting greenhouse gas emissions vary, the list of super polluters is made up of almost exclusively power plants. For toxic air emissions, the data varies slightly with chemical, waste and paper plants also appearing on the top 100 list. 
+            <br />
+            <br />
+            </p>
+        </article>
+
+<!-- Insert Google map -->
+          <div class="uk-panel uk-panel-box">
+            <div style="width:80%; margin: auto">
+            <h2>Where are the super polluters?</h2>
+
+            <div id="map_markers_div" style="width: 100%; height: 500px"></div>
+
+
+
+            <div id="legend" style="text-align: center">
+              <h3>The above map displays the location of each super polluter along with their ranking on the top 100 lists for toxic air and greenhouse gases. Click on the buttons below to switch between the three lists and see where the facilities are located.</h3>
+              <div class="data-uk-button-checkbox">
+                <button style="text-align: center" id="show-TRI-map" class="uk-button">Top 100 TRI</button>
+                <button id="super-polluter-map" class="uk-button">22 Super Polluters</button>
+                <button id="show-GHG-map" class="uk-button">Top 100 GHG</button>
+              </div>
+              <h5 class="source-credit">Source: Center for Public Integrity. <a href='https://docs.google.com/spreadsheets/d/1UXE-z0nNaP8IHhCJmyZyuxDMt5R6a7BgOKLlITKx-Mc/edit#gid=20502916'>Download data.</a></h5>
+            </div>
+
+            </div>
+          </div>
+          <br />
+
+          <article class="article-container">
+            <p>
+              The top 100 polluters for toxic air remain largely confined to the eastern half of the US, with two noticeably large clusters near Indiana and another around Louisiana. The worst polluters for greenhouse gases are slightly more spread out, but large pockets can be seen near Pennsylvania.
+              <br />
+              <br />
+              When cross-referencing the datasets, the 22 super polluters appear almost exclusively in this midwest region. Of the list, 17 facilities are located within a 600 mile radius. For reference, that’s <a href"http://www.worldatlas.com/webimage/countrys/europe/unitedkingdom/uklandst.htm">about the same size</a> as the United Kingdom, from the tip of Scotland down to the English Channel. 
+              <br />
+              <br />
+              The Center for Public Integrity’s <a href="https://www.publicintegrity.org/2016/09/29/20248/america-s-super-polluters">analysis</a> also revealed that more toxic air was emitted within 30 miles of the Indiana town of Evansville (population ~120,000) than any large American city in 2014.
+              <br />
+              <br />
+              Evansville is an unusual town. Despite it’s small size, it hosts four of the 22 dual-super polluters. And despite containing only six-percent of the state population, the region around Evansville produces more than 40% of Indiana’s electricity output. 
+              <br />
+              <br />
+              Discovering how this came to be requires a deep dive into energy legislation and the <a href="https://eh.net/encyclopedia/the-us-coal-industry-in-the-nineteenth-century-2/">history of coal-towns.</a> But it’s worth noting that Indiana was among the 27 states that attempted to resist a <a href="https://www.epa.gov/mats">federal rule</a> to restrict toxic emissions from coal and oil-fired power plants. It also helps that its previous governor, Mike Pence — the new vice President-elect — is notoriously <a href="http://www.in.gov/activecalendar/EventList.aspx?fromdate=10/1/2015&todate=10/30/2015&display=Month&type=public&eventidn=238313&view=EventDetails&information_id=233054">pro-coal</a> and <a href="http://www.huffingtonpost.com/entry/mike-pence-climate-change_us_57ec12bde4b082aad9b8b8f1">skeptical</a> of climate change science.
+              <br />
+              <br />
+            </p>
+              <h2><em>Following the money</em></h2>
+            <p>
+<br />
+              The ratio of emissions in the US presents a stark picture of disproportionality. But if you follow the money, the gap of disproportionality gets even wider. 
+              <br />
+              <br />
+              Most of the facilities on the EPA’s TRI report are owned by parent companies. By grouping each facility by ownership and totaling these emissions, the data shows that only 10 parent companies were responsible for over 25% of all toxic air emissions in the US in 2014. That’s from a list of over 20,000 possible parent companies.
+              <br />
+              <br />
+              Grouping the facilities by parent companies also takes the emphasis off individual plants and onto the companies that own them. For example, none of the plants owned by the International Paper Co. show up as super polluters on the map. But taken collectively, International Paper Co. is responsible for more toxic air emissions than any other parent company in the US. 
+              <br />
+              <br />
+            </p>
+          </article>
+
+<!-- Insert treemap -->
+          <div class="uk-panel uk-panel-box" style="max-width: 800px; margin: auto">
+            <h2>Toxic air facility ownership by parent company</h2>
+            <p class="subtitle">
+              The treemap below represents the total toxic air emissions for each parent company. The size of a box represents how many facilities each company owns. Darker shades of red represent the highest emitters. Click on a box to see individual facilities. Right-click to go back to the parent company view.
+            </p>
+            <div id="treemap" style="height: 500px; z-index: -1"></div>
+            <h5 class="source-credit">Source: EPA, Center for Public Integrity <a href='https://docs.google.com/spreadsheets/d/1UXE-z0nNaP8IHhCJmyZyuxDMt5R6a7BgOKLlITKx-Mc/edit#gid=20502916'>Download data.</a></h5>
+
+          </div>
+
+          <article class="article-container">
+            <br />
+            <p>
+              When it comes to greenhouse gas emissions, the indicators become less clear. Most facilities reporting on the GHG dataset are under shared ownership, with multiple parent companies owning a certain percentage of the facility. However, of the facilities under 100% ownership by a single company, the top 10 parent companies were responsible for about 19% of all greenhouse gas emissions. Since these parent companies generally also possess shared ownership of other facilities, this percentage is likely lower than the true figures.
+              <br />
+              <br />
+              The following table shows the top 10 worst parent companies in both categories, with the total amount of emissions and the number of facilities owned. Among the top 10 parent companies for both greenhouse gas and toxic air emissions, five companies appear on both lists. That means that collectively, these companies are among the top 10 worst in the country for both toxic air and greenhouse gas emissions.
+              <br />
+              <br />
+              They include four corporations: American Electric Power, NRG Energy Inc., Duke Energy Corp and Southern Co. The fifth parent company to appear on both top ten lists isn’t actually a corporation — it’s the US Government. 
+            </p>
+            <h2 style="text-align:center">Parent companies responsible for toxic air and greenhouse gas emissions</h2>
+
+          </article>
+
+<!-- Insert tables here -->
+          <div class="uk-panel uk-panel-box" style="max-width:500px; margin:auto">
+
+            <div id="table_div" style="text-align:center; margin: auto;"></div>
+            <br />
+            <p class="caption">
+                The following table shows each parent company, the total amount of emissions and the number of facilities owned. Click the buttons to scroll through tables for toxic air (in metric tons), greenhouse gases (in pounds) and a list of parent companies appearing on both.
+            </p>
+            <div style="text-align: center" class="data-uk-button-checkbox">
+                        <button id="GHG_table" class="uk-button">Top 10 Greenhouse</button>
+                        <button id="TRI_table" class="uk-button">Top 10 Toxic Air</button>
+                        <button id="Dual_table" class="uk-button">Dual-Polluters</button>
+            </div>
+            <h5 class="source-credit">Source: Center for Public Integrity. <a href='https://docs.google.com/spreadsheets/d/1UXE-z0nNaP8IHhCJmyZyuxDMt5R6a7BgOKLlITKx-Mc/edit#gid=20502916'>Download data.</a></h5>
+          </div>
+
+          <article class="article-container">
+            <p>
+              <br />
+              Like many dominant companies, these five conglomerates push their influence on legislation via lobbying. Three of the them — American Electric Power, Duke Energy and Southern Co — are members of the <a href="http://www.sourcewatch.org/index.php/American_Coal_Ash_Association">American Coal Ash Association (ACAA)</a>, a national lobbying group promoting coal ash interests. Collectively they make up one of the most influential corporate lobbying groups for coal and energy companies in the US today. 
+              <br />
+              <br />
+              2016 was a big year for lobbyists, a year when one of the most unpredictable US elections would be decided. The Tennessee Valley Authority — the only federally-owned corporation on the list — was the only group absent from lobbying records. However, the Center for Responsive Politics recorded lobbying contributions by the other four companies for the recent election cycle. They found that <a href="https://www.opensecrets.org/orgs/summary.php?id=D000028051">NRG Energy ranked 411th</a> for highest contributions of the 3,644 lobbying companies in 2016. <a href="https://www.opensecrets.org/orgs/summary.php?id=D000000573">American Electric Power</a> was 64th and <a href="https://www.opensecrets.org/orgs/summary.php?id=D000000477">Duke Energy</a> came at 54th. <a href="https://www.opensecrets.org/orgs/summary.php?id=D000000168">Southern Co</a> ranked 15th, with over $10million contributed for the year.
+              <br />
+              <br />
+            </p>
+          </article>
+
+<!-- Insert Column chart here -->
+          <div class="uk-panel uk-panel-box" style="max-width:800px; margin:auto">
+            <h2>Lobbying contributions in 2016</h2>
+            <div id="column_div" style="text-align:center; margin:auto;"></div>
+            <h5 class="source-credit">Source: <a target="_blank" href="https://www.opensecrets.org/orgs/summary.php?id=D000000168">OpenSecrets</a></h5>
+          </div>
+
+          <article class="article-container">
+            <p>
+              <br />
+              When looking at the numbers behind air pollution, the total amounts can be staggering: millions upon millions of dollars in lobbying, metric tons of greenhouse gases and pounds of toxic air emissions. Amounts so large it’s hard to process them.
+              <br />
+              <br />
+              But on the receiving end of the numbers are real, tangible realities.  Lobbying dollars contribute to campaign ads and legislation groups. Greenhouse gases — which are predominantly released by human activity — are exponentially increasing the earth’s <a href="https://www.eia.gov/tools/faqs/faq.cfm?id=81&t=11">greenhouse effect.</a> And multiple <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(16)00378-0/abstract">studies</a> have linked cardiovascular risk and lung diseases with long-term exposure to particulate matter from air pollution.
+              <br />
+              <br />
+              Data on which companies are emitting the most pollution can help shed light on the state of power plants in the US. As huge conglomerates, tracing the individual facilities back to their owners reveals how many plants each company has accumulated over time. Yet as with all datasets, behind the numbers are the lives of people. Over eight million Americans reside within a three-mile radius of a coal power plant. Of <a href="http://www.sourcewatch.org/index.php/Coal_plants_near_residential_areas">this group</a>, the average per capita income is $18,594, almost $3,000 less than the US average. 
+              <br />
+              <br />
+              Solving America’s energy and climate problems will never be an easy fix. A country built on coal and <a href="http://www.infrastructurereportcard.org/transportation-infrastructure/">reliant on cars</a> over public transport will inevitably require a massive amount of energy. In its current state, a few parent companies are dictating the future of America’s pollution, showing signs of environmental disproportionality at work. 
+              <br />
+              <br />
+              They came early to the party; and they took the biggest slices first.
+              <br />
+<br />
+              <p style="text-align: center">
+                ----------
+              </p>
+            </p>
+          </article>
+
+</div>
+
+<!-- Footer Social Media buttons - B & W -->
+<h2 style="text-align: center">Share</h2>
+<ul class="share-buttons" style="margin-bottom: 100px">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&t=Introducing%3A%20The%20Super%20Polluters" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="images/flat_web_icon_set-color/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&text=Introducing%3A%20The%20Super%20Polluters:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html&via=bnj_cooley" target="_blank" title="Tweet"><img alt="Tweet" src="images/flat_web_icon_set-color/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="images/flat_web_icon_set-color/color/Google+.png"></a></li>
+  <li><a href="mailto:?subject=Introducing%3A%20The%20Super%20Polluters&body=Every%20year%2C%20over%2016%2C000%20facilities%20in%20the%20US%20emit%20toxic%20air%20and%20greenhouse%20gases%20into%20the%20atmosphere.%20But%20a%20small%20group%20%E2%80%94%20less%20than%2010%20parent%20companies%20%E2%80%94%20are%20responsible%20for%20most%20of%20it.:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fsuper-polluters%2Findex.html" target="_blank" title="Send email"><img alt="Send email" src="images/flat_web_icon_set-color/color/Email.png"></a></li>
+</ul>
+
+<footer>
+  <ul class="uk-grid" data-uk-grid-margin style="margin: auto">
+  <li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+    <div class="uk-panel-box footer-panel" style="">
+    <h2 style="color: white">About</h2>
+    <p style="font-size: 1.3em">
+    Benjamin Cooley is a postgrad student pursuing an MSc in Digital Journalism at Goldsmiths. He is currently looking for opportunities in data-driven storytelling and interactive visualisations.
+    </p>
+  </div>
+  </li>
+
+  <li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+    <div class="footer-panel uk-panel-box" style="">
+    <h2 style="color: white">Projects</h2>
+
+      <ul>
+        <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/portfolio/hyperpartisan/index.html">How hyperpartisan publishers are tapping into Twitter</a></li>
+        <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/benjamin_cooley_dj/2016/10/26/coffee-cups-charge-convenience-recycling/">The cost of convenience</a></li>
+        <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/portfolio/beer-dashboard/beer-dashboard.html">London Beersource</a></li>
+        <li><a style="color: white" href="http://www.eastlondonlines.co.uk/?s=Benjamin+Cooley">Reporting for EastLondonLines</a></li>
+        <li><a style="color: white" href="https://benjamincooley.contently.com/?preview=true">Full clippings of published work</a></li>
+      </ul>
+  </div>
+  </li>
+
+  <li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+    <div class="footer-panel uk-panel-box" style="">
+    <h2 style="color: white; margin-bottom: -10px">Connect</h2>
+
+      <ul class="share-buttons" style="padding: 25px; margin-left: -50px">
+        <li><a href="https://www.facebook.com/bnj.cooley" title="Connect on Facebook" target="_blank"><img style="width: 40px; margin: 1gpx" alt="Connect on Facebook" src="images/flat_web_icon_set-color/color/Facebook.png"></a></li>
+        <li><a href="https://twitter.com/bnj_cooley" target="_blank" title="Follow"><img style="width: 40px; margin: 1gpx"  alt="Follow" src="images/flat_web_icon_set-color/color/Twitter.png"></a></li>
+        <li><a href="https://www.linkedin.com/in/benjamincooley" target="_blank" title="Connect on LinkedIn"><img style="width: 40px; margin: 1gpx"  alt="Connect on LinkedIn" src="images/flat_web_icon_set-color/color/LinkedIn.png"></a></li>
+        <li><a href="mailto:benjamincooley94@gmail.com" target="_blank" title="Send email"><img style="width: 40px; margin: 1gpx"  alt="Send email" src="images/flat_web_icon_set-color/color/Email.png"></a></li>
+      </ul>
+
+  </div>
+  </li>
+
+
+
+  </ul>
+</footer>
+
+    <!-- Other Javascript -->
+
+<script>
+$("#scroll").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#start-article").offset().top},
+        2000);
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>
